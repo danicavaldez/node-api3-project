@@ -57,7 +57,7 @@ router.get('/:id/posts', validateUserId, (req, res) => {
 });
 
 router.delete('/:id', validateUserId, (req, res) => {
-  db.remove(req.params.id)
+db.remove(req.params.id)
   .then(() => {
       res.status(200).json({message: "User has been deleted."})
   })
